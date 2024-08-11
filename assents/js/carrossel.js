@@ -1,23 +1,29 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let currentIndex = 0;
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+function updateCarousel() {
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    const itemsToShow = 3;
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.querySelector('.slides');
-    let dots = document.querySelectorAll('.dot');
-    if (n > dots.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = dots.length}
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(' active', '');
+    if (currentIndex < 0) {
+        currentIndex = totalItems - itemsToShow;
+    } else if (currentIndex >= totalItems - itemsToShow + 1) {
+        currentIndex = 0;
     }
-    slides.style.transform = 'translateX(' + (-(slideIndex - 1) * 100 / dots.length) + '%)';
-    dots[slideIndex-1].className += ' active';
+
+    const offset = -currentIndex * 100 / itemsToShow;
+    carousel.style.transform = `translateX(${offset}%)`;
 }
+
+function nextSlide() {
+    currentIndex += 3;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentIndex -= 3;
+    updateCarousel();
+}
+
+updateCarousel();
