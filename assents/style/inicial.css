@@ -11,28 +11,30 @@
 
 body {
     font-family: "Poppins", sans-serif;
-
-
  }
 
+html{
+    scroll-behavior: smooth;
+}
 
 /* section */
-.page1, .page2, .page3 {
+section {
     padding: 25px 8rem;
 
 }
 
 
 /* pag evento */
+#evento {
+    background: linear-gradient(to bottom,#1D1939,#471A53);
+    height: 100vh;
+}
 
 .page1{
     display: flex;  
-    justify-content: flex-start;
     align-items: center;
-    width: 100vw;
-    gap: 15rem;
-    overflow: hidden;
-    background: linear-gradient(to bottom,#1D1939,#471A53);
+    gap: 13rem;
+    margin-top: 4rem;
 }
 
 .intro {
@@ -40,6 +42,159 @@ body {
 }
 
 .intro > p {
-    max-width: 30rem;
+    max-width: 40rem;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.intro > h1 {
+    font-family: "Sansita", sans-serif;
+    font-weight: 800;
+    font-size: 5rem;
+    color: #CA96FE;
+    font-style: italic;
+    line-height: 70px;
+}
+
+.intro > h3 {
+    font-family: "Viga", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.info-evento {
+    display: flex;
+    gap: 2rem;
+    border: solid 3px #CA96FE;
+    padding: 1rem;
+    max-width: 37rem;
+}
+
+.info-item {
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-item {
+    font-family: "Viga", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.info-item > img {
+    width: 3rem;
+}
+
+.img-evento {
+    margin-top: 2rem;
+    animation: flutuacao 2s ease-in-out infinite;
+}
+
+@keyframes flutuacao {
+    0%,100%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+/* pag trilhas */
+#trilhas {
+    height: 120vh;
+    background-color: #D4C3B9;
+}
+
+.page2 {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    margin-top: 5rem;
+}
+
+.left{
+    margin-top: 3rem;
+    
+}
+
+.left > h1 {
+    font-family: "Sansita", sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    color: #22193C;
+    line-height: 60px;
+    max-width: 20rem;
+    font-style: italic;
+    margin-bottom: 6rem;
+}
+
+.left > h1 > span {
+    color: #471A53;
+}
+
+/* cards */
+.right {
+    margin-top: 5rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #ECE1E1;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+   
+    padding: 0.5rem 1.5rem;
+    width: 35rem;
+    height: 8rem;
+}
+
+.card img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo h4 {
+    font-family: "Viga", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    
+}
+
+.vertical-bar {
+    width: 2px;
+    height: 80px;
+    background-color: #471A53;
+    border: none;
+    transform: rotate(0deg);
+    margin: 0 10px;
+    margin-right: 20px;
+}
+
+
+.informe {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.informe img {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 

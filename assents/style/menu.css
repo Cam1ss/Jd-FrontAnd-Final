@@ -3,11 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding: 1rem 5rem;
+    padding: 1rem 8rem;
     position: fixed;
     width: 100vw;
+}
+
+.menu.rolagem {
+    background-color: #1D1939;
 }
 
 .img{
@@ -30,8 +32,8 @@
     text-transform: uppercase; 
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
     letter-spacing: 2px;
     cursor: pointer;
 }
