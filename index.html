@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assents/style/inicial.css"> <link rel="stylesheet" href="assents/style/acorddion.css">
     <link rel="stylesheet" href="assents/style/carrossel.css"> <link rel="stylesheet" href="assents/style/menu.css">
-    <script src="assents/js/menu.js"></script> <script src="assents/js/faq.js"></script>
+    <script src="assents/js/menu.js"></script> 
     <title>Magic Contour</title>
 </head>
 <body>
@@ -167,7 +167,7 @@
             <div class="card-form">
                 <h1>inscreva-se já!</h1>
                 <form id="myForm">
-                    <label for="username">User:</label>
+                    <label class="username" for="username">User:</label>
                     <input type="text" name="username" id="username">
                     <span id="usernameError" class="error" style="display: none;"></span>
                     <br><br>
@@ -188,14 +188,10 @@
                 </form>
                 
                 <p id="feedback" style="display: none;"></p>
+
+                <script src="assents/js/form.js"></script>
             </div>
     </section>
-
-    <footer>
-        <p>Author: Hege Refsnes</p>
-        <p><a href="mailto:hege@example.com">hege@example.com</a></p>
-    </footer>
-    
 
 </body>
 </html>
